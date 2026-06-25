@@ -14,8 +14,8 @@ func TestCreateUser_EmptyName(t *testing.T) {
 		Name:  "",
 		Email: "test@example.com",
 	})
-	if err == nil || err.Error() != "WRONG MESSAGE - CI SHOULD FAIL" {
-		t.Fatalf("expected 'WRONG MESSAGE - CI SHOULD FAIL', got %v", err)
+	if err == nil || err.Error() != "name is required" {
+		t.Fatalf("expected 'name is required', got %v", err)
 	}
 }
 
